@@ -1,0 +1,151 @@
+.connection {
+  padding: 110px 15px;
+}
+
+.connection__block {
+  max-width: 730px;
+
+  h2 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 1.05px;
+    color: $gray_txt;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $gray_txt;
+    line-height: 28px;
+    margin: 35px auto 60px;
+
+    &:after {
+      content: "";
+      border-bottom: 2px solid $btn_bg-color;
+      width: 130px;
+      height: 2px;
+      display: block;
+      margin-top: 60px;
+    }
+  }
+}
+
+.connection__contacts {
+  display: flex;
+  max-width: 1280px;
+  position: relative;
+}
+
+.connection__forms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.connection__input {
+  width: 46%;
+  padding: 23px 0 23px 55px;
+  border: none;
+  border-radius: 5px;
+  background-color: $form_bg;
+}
+
+.connection__area {
+  margin: 45px 0;
+  width: 100%;
+  padding: 35px 35px 35px 55px;
+  height: 250px;
+  border: none;
+  border-radius: 5px;
+  background-color: $form_bg;
+  outline: none;
+  resize: none;
+}
+
+.btn {
+  @include btn;
+  width: 100%;
+  text-transform: uppercase;
+  height: 72px;
+  padding: 0;
+  border: none;
+
+  &:hover {
+    background: darken($btn_bg-color, 20%);
+  }
+}
+
+.connection__info {
+  background-color: $info_bg;
+  color: $white;
+  padding: 122px 0 122px 79px;
+  width: 45%;
+  right: -148px;
+  position: absolute;
+
+
+  h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  p {
+    color: $white;
+    line-height: 28px;
+    max-width: 260px;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .connection__info {
+    position: static;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .connection {
+    padding: 50px 15px;
+  }
+
+  .connection__block {
+    text-align: center;
+    margin: 0 auto;
+
+    p {
+      &:after {
+        margin: 30px auto;
+      }
+    }
+  }
+
+  .connection__contacts {
+    flex-direction: column;
+  }
+
+  .connection__info {
+    width: 100%;
+    margin: 0;
+    padding: 30px 0;
+    text-align: center;
+
+    p {
+      text-align: center;
+      margin: 10px auto;
+    }
+  }
+
+  .btn {
+    margin-bottom: 30px;
+  }
+
+}
